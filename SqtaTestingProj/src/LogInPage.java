@@ -97,7 +97,7 @@ public class LogInPage extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 	
 				String usid = userid.getText();
-				String psw = password.getText();
+				String psw = new String(password.getPassword());
 				
 				try {
 					Class.forName("com.mysql.cj.jdbc.Driver");
@@ -117,6 +117,8 @@ public class LogInPage extends JFrame {
 					{
 						JOptionPane.showMessageDialog(frame , "You are logged in!!!!");
 						dispose();
+						SelectionMenu SM = new SelectionMenu();
+						SM.setVisible(true);
 						j--;
 						break;	
 					}
