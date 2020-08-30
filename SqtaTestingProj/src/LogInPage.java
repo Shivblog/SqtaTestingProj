@@ -19,7 +19,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class Login extends JFrame {
+public class LogInPage extends JFrame {
 
 	private JPanel contentPane;
 	private JFrame frame;
@@ -35,7 +35,7 @@ public class Login extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Login frame = new Login();
+					LogInPage frame = new LogInPage();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -44,7 +44,7 @@ public class Login extends JFrame {
 		});
 	}
 
-	public Login() {
+	public LogInPage() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(0,0, 1920, 1080);
 		contentPane = new JPanel();
