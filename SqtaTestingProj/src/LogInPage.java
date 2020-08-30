@@ -117,10 +117,11 @@ public class LogInPage extends JFrame {
 					if(usid.equals(id) && psw.equals(pass))
 					{
 						JOptionPane.showMessageDialog(frame , "You are logged in!!!!");
+						j--;
 						dispose();
 						SelectionMenu SM = new SelectionMenu();
 						SM.setVisible(true);
-						j--;
+						
 						break;	
 					}
 					else
