@@ -1,6 +1,4 @@
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -11,6 +9,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
+@SuppressWarnings("serial")
 public class SelectionMenu extends JFrame {
 
 	private JPanel contentPane;
@@ -38,7 +37,7 @@ public class SelectionMenu extends JFrame {
 		
 		JLabel lblMenu = new JLabel("Menu");
 		lblMenu.setHorizontalAlignment(SwingConstants.CENTER);
-		lblMenu.setFont(new Font("Tahoma", Font.PLAIN, 55));
+		lblMenu.setFont(new Font("Tahoma", Font.BOLD, 55));
 		lblMenu.setBounds(860, 75, 200, 100);
 		contentPane.add(lblMenu);
 		
