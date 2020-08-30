@@ -1,0 +1,10 @@
+TO BE EXECUTED BEFORE ANYTHING
+
+create database SqtaProj;
+
+use SqtaProj;
+
+create table userid (username VARCHAR(100) NOT NULL PRIMARY KEY, password VARCHAR(100) NOT NULL);
+
+insert into userid values ("First Year","1styear");
+
