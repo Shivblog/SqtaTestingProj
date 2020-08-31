@@ -35,9 +35,9 @@ public class LogInPage extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					LogInPage frame = new LogInPage();
-					frame.setVisible(true);
-					frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+					LogInPage LogInPageframe = new LogInPage();
+					LogInPageframe.setVisible(true);
+					LogInPageframe.setExtendedState(JFrame.MAXIMIZED_BOTH);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -119,9 +119,8 @@ public class LogInPage extends JFrame {
 						JOptionPane.showMessageDialog(frame , "You are logged in!!!!");
 						j--;
 						dispose();
-						SelectionMenu SM = new SelectionMenu();
-						SM.setVisible(true);
-						
+						Instructions inst = new Instructions();
+						inst.setVisible(true);
 						break;	
 					}
 					else

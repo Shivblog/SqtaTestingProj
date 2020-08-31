@@ -18,9 +18,9 @@ public class SelectionMenu extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					SelectionMenu frame = new SelectionMenu();
-					frame.setVisible(true);
-					frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+					SelectionMenu SelectionMenuframe = new SelectionMenu();
+					SelectionMenuframe.setVisible(true);
+					SelectionMenuframe.setExtendedState(JFrame.MAXIMIZED_BOTH);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -51,7 +51,7 @@ public class SelectionMenu extends JFrame {
 			}
 		});
 		btnFirstYear.setFont(new Font("Tahoma", Font.PLAIN, 27));
-		btnFirstYear.setBounds(405, 300, 225, 75);
+		btnFirstYear.setBounds(555, 300, 225, 175);
 		contentPane.add(btnFirstYear);
 		
 		JButton btnSecondYear = new JButton("Second Year");
@@ -63,7 +63,7 @@ public class SelectionMenu extends JFrame {
 			}
 		});
 		btnSecondYear.setFont(new Font("Tahoma", Font.PLAIN, 27));
-		btnSecondYear.setBounds(405, 550, 225, 75);
+		btnSecondYear.setBounds(555, 550, 225, 175);
 		contentPane.add(btnSecondYear);
 		
 		JButton btnThirdYear = new JButton("Third Year");
@@ -75,7 +75,7 @@ public class SelectionMenu extends JFrame {
 			}
 		});
 		btnThirdYear.setFont(new Font("Tahoma", Font.PLAIN, 27));
-		btnThirdYear.setBounds(1365, 300, 225, 75);
+		btnThirdYear.setBounds(1215, 300, 225, 175);
 		contentPane.add(btnThirdYear);
 		
 		JButton btnFourthYear = new JButton("Fourth Year");
@@ -87,7 +87,7 @@ public class SelectionMenu extends JFrame {
 			}
 		});
 		btnFourthYear.setFont(new Font("Tahoma", Font.PLAIN, 27));
-		btnFourthYear.setBounds(1365, 550, 225, 75);
+		btnFourthYear.setBounds(1215, 550, 225, 175);
 		contentPane.add(btnFourthYear);
 	}
 }
