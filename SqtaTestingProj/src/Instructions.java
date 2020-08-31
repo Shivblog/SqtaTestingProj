@@ -54,16 +54,16 @@ public class Instructions extends JFrame {
 		panel.setBounds(200, 500, 1102, 495);
 		contentPane.add(panel);
 		
-		JLabel lblFirstInst = new JLabel("• This application is only for computer science students.");
+		JLabel lblFirstInst = new JLabel("• This application is only for computer science students, all subjects are of SPPU 2015 pattern.");
 		lblFirstInst.setFont(new Font("Tahoma", Font.PLAIN, 27));
 		lblFirstInst.setHorizontalAlignment(SwingConstants.LEFT);
-		lblFirstInst.setBounds(200, 200, 700, 75);
+		lblFirstInst.setBounds(200, 200, 1300, 75);
 		contentPane.add(lblFirstInst);
 		
-		JLabel lblSecondInst = new JLabel("• All subjects are of SPPU 2015 pattern.");
+		JLabel lblSecondInst = new JLabel("• If you want to calculate CGPA of only 1 sem just enter that data and click calculate.");
 		lblSecondInst.setFont(new Font("Tahoma", Font.PLAIN, 27));
 		lblSecondInst.setHorizontalAlignment(SwingConstants.LEFT);
-		lblSecondInst.setBounds(200, 275, 800, 75);
+		lblSecondInst.setBounds(200, 275, 1300, 75);
 		contentPane.add(lblSecondInst);
 		
 		JLabel lblThirdInst = new JLabel("• You can calculate SGPA/CGPA even if you are failed in a subject which of course is just a speculation of");
