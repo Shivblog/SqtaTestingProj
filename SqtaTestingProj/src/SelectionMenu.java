@@ -20,6 +20,7 @@ public class SelectionMenu extends JFrame {
 				try {
 					SelectionMenu frame = new SelectionMenu();
 					frame.setVisible(true);
+					frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
