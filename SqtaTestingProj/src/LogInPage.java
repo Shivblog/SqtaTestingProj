@@ -1,6 +1,5 @@
 import java.awt.Color;
 import java.awt.EventQueue;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -38,6 +37,7 @@ public class LogInPage extends JFrame {
 				try {
 					LogInPage frame = new LogInPage();
 					frame.setVisible(true);
+					frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
