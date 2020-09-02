@@ -7,6 +7,8 @@ import java.awt.Font;
 import javax.swing.SwingConstants;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 @SuppressWarnings("serial")
 public class FirstYear extends JFrame {
@@ -16,16 +18,16 @@ public class FirstYear extends JFrame {
 	private JTextField textFieldFSSub2;
 	private JTextField textFieldFSSub3;
 	private JTextField textFieldFSSub4;
-	private JTextField textFieldFSsub5;
+	private JTextField textFieldFSSub5;
 	private JTextField textFieldFSSub6;
 	private JTextField textFieldFSSub7;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_3;
-	private JTextField textField_4;
-	private JTextField textField_5;
-	private JTextField textField_6;
+	private JTextField textFieldSSSub1;
+	private JTextField textFieldSSSub2;
+	private JTextField textFieldSSSub3;
+	private JTextField textFieldSSSub4;
+	private JTextField textFieldSSSub5;
+	private JTextField textFieldSSSub6;
+	private JTextField textFieldSSSub7;
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -142,12 +144,12 @@ public class FirstYear extends JFrame {
 		textFieldFSSub4.setBounds(595, 505, 250, 60);
 		contentPane.add(textFieldFSSub4);
 		
-		textFieldFSsub5 = new JTextField();
-		textFieldFSsub5.setHorizontalAlignment(SwingConstants.CENTER);
-		textFieldFSsub5.setFont(new Font("Tahoma", Font.PLAIN, 32));
-		textFieldFSsub5.setColumns(10);
-		textFieldFSsub5.setBounds(595, 625, 250, 60);
-		contentPane.add(textFieldFSsub5);
+		textFieldFSSub5 = new JTextField();
+		textFieldFSSub5.setHorizontalAlignment(SwingConstants.CENTER);
+		textFieldFSSub5.setFont(new Font("Tahoma", Font.PLAIN, 32));
+		textFieldFSSub5.setColumns(10);
+		textFieldFSSub5.setBounds(595, 625, 250, 60);
+		contentPane.add(textFieldFSSub5);
 		
 		textFieldFSSub6 = new JTextField();
 		textFieldFSSub6.setHorizontalAlignment(SwingConstants.CENTER);
@@ -164,6 +166,33 @@ public class FirstYear extends JFrame {
 		contentPane.add(textFieldFSSub7);
 		
 		JButton btnCalculate = new JButton("Calculate");
+		btnCalculate.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				int FSSub1 = Integer.parseInt(textFieldFSSub1.getText());
+				int FSSub2 = Integer.parseInt(textFieldFSSub2.getText());
+				int FSSub3 = Integer.parseInt(textFieldFSSub3.getText());
+				int FSSub4 = Integer.parseInt(textFieldFSSub4.getText());
+				int FSSub5 = Integer.parseInt(textFieldFSSub5.getText());
+				int FSSub6 = Integer.parseInt(textFieldFSSub6.getText());
+				int FSSub7 = Integer.parseInt(textFieldFSSub7.getText());
+				
+				int SSSub1 = Integer.parseInt(textFieldSSSub1.getText());
+				int SSSub2 = Integer.parseInt(textFieldSSSub2.getText());
+				int SSSub3 = Integer.parseInt(textFieldSSSub3.getText());
+				int SSSub4 = Integer.parseInt(textFieldSSSub4.getText());
+				int SSSub5 = Integer.parseInt(textFieldSSSub5.getText());
+				int SSSub6 = Integer.parseInt(textFieldSSSub6.getText());
+				int SSSub7 = Integer.parseInt(textFieldSSSub7.getText());
+				
+				int[] arrs1 = new int[]{FSSub1,FSSub2,FSSub3,FSSub4,FSSub5,FSSub6,FSSub7};
+				int[] arrs2 = new int[]{SSSub1,SSSub2,SSSub3,SSSub4,SSSub5,SSSub6,SSSub7};
+				
+				Calculate cal = new Calculate();
+				cal.calc(arrs1);
+				cal.calc(arrs2);
+				cal.calc(arrs1,arrs2);
+			}
+		});
 		btnCalculate.setHorizontalAlignment(SwingConstants.RIGHT);
 		btnCalculate.setFont(new Font("Tahoma", Font.BOLD, 45));
 		btnCalculate.setBounds(860, 900, 250, 75);
@@ -223,53 +252,53 @@ public class FirstYear extends JFrame {
 		lblSSSub7.setBounds(1135, 775, 150, 60);
 		contentPane.add(lblSSSub7);
 		
-		textField = new JTextField();
-		textField.setHorizontalAlignment(SwingConstants.CENTER);
-		textField.setFont(new Font("Tahoma", Font.PLAIN, 32));
-		textField.setColumns(10);
-		textField.setBounds(1570, 245, 250, 60);
-		contentPane.add(textField);
+		textFieldSSSub1 = new JTextField();
+		textFieldSSSub1.setHorizontalAlignment(SwingConstants.CENTER);
+		textFieldSSSub1.setFont(new Font("Tahoma", Font.PLAIN, 32));
+		textFieldSSSub1.setColumns(10);
+		textFieldSSSub1.setBounds(1570, 245, 250, 60);
+		contentPane.add(textFieldSSSub1);
 		
-		textField_1 = new JTextField();
-		textField_1.setHorizontalAlignment(SwingConstants.CENTER);
-		textField_1.setFont(new Font("Tahoma", Font.PLAIN, 32));
-		textField_1.setColumns(10);
-		textField_1.setBounds(1570, 320, 250, 60);
-		contentPane.add(textField_1);
+		textFieldSSSub2 = new JTextField();
+		textFieldSSSub2.setHorizontalAlignment(SwingConstants.CENTER);
+		textFieldSSSub2.setFont(new Font("Tahoma", Font.PLAIN, 32));
+		textFieldSSSub2.setColumns(10);
+		textFieldSSSub2.setBounds(1570, 320, 250, 60);
+		contentPane.add(textFieldSSSub2);
 		
-		textField_2 = new JTextField();
-		textField_2.setHorizontalAlignment(SwingConstants.CENTER);
-		textField_2.setFont(new Font("Tahoma", Font.PLAIN, 32));
-		textField_2.setColumns(10);
-		textField_2.setBounds(1570, 435, 250, 60);
-		contentPane.add(textField_2);
+		textFieldSSSub3 = new JTextField();
+		textFieldSSSub3.setHorizontalAlignment(SwingConstants.CENTER);
+		textFieldSSSub3.setFont(new Font("Tahoma", Font.PLAIN, 32));
+		textFieldSSSub3.setColumns(10);
+		textFieldSSSub3.setBounds(1570, 435, 250, 60);
+		contentPane.add(textFieldSSSub3);
 		
-		textField_3 = new JTextField();
-		textField_3.setHorizontalAlignment(SwingConstants.CENTER);
-		textField_3.setFont(new Font("Tahoma", Font.PLAIN, 32));
-		textField_3.setColumns(10);
-		textField_3.setBounds(1570, 505, 250, 60);
-		contentPane.add(textField_3);
+		textFieldSSSub4 = new JTextField();
+		textFieldSSSub4.setHorizontalAlignment(SwingConstants.CENTER);
+		textFieldSSSub4.setFont(new Font("Tahoma", Font.PLAIN, 32));
+		textFieldSSSub4.setColumns(10);
+		textFieldSSSub4.setBounds(1570, 505, 250, 60);
+		contentPane.add(textFieldSSSub4);
 		
-		textField_4 = new JTextField();
-		textField_4.setHorizontalAlignment(SwingConstants.CENTER);
-		textField_4.setFont(new Font("Tahoma", Font.PLAIN, 32));
-		textField_4.setColumns(10);
-		textField_4.setBounds(1570, 625, 250, 60);
-		contentPane.add(textField_4);
+		textFieldSSSub5 = new JTextField();
+		textFieldSSSub5.setHorizontalAlignment(SwingConstants.CENTER);
+		textFieldSSSub5.setFont(new Font("Tahoma", Font.PLAIN, 32));
+		textFieldSSSub5.setColumns(10);
+		textFieldSSSub5.setBounds(1570, 625, 250, 60);
+		contentPane.add(textFieldSSSub5);
 		
-		textField_5 = new JTextField();
-		textField_5.setHorizontalAlignment(SwingConstants.CENTER);
-		textField_5.setFont(new Font("Tahoma", Font.PLAIN, 32));
-		textField_5.setColumns(10);
-		textField_5.setBounds(1570, 700, 250, 60);
-		contentPane.add(textField_5);
+		textFieldSSSub6 = new JTextField();
+		textFieldSSSub6.setHorizontalAlignment(SwingConstants.CENTER);
+		textFieldSSSub6.setFont(new Font("Tahoma", Font.PLAIN, 32));
+		textFieldSSSub6.setColumns(10);
+		textFieldSSSub6.setBounds(1570, 700, 250, 60);
+		contentPane.add(textFieldSSSub6);
 		
-		textField_6 = new JTextField();
-		textField_6.setHorizontalAlignment(SwingConstants.CENTER);
-		textField_6.setFont(new Font("Tahoma", Font.PLAIN, 32));
-		textField_6.setColumns(10);
-		textField_6.setBounds(1570, 775, 250, 60);
-		contentPane.add(textField_6);
+		textFieldSSSub7 = new JTextField();
+		textFieldSSSub7.setHorizontalAlignment(SwingConstants.CENTER);
+		textFieldSSSub7.setFont(new Font("Tahoma", Font.PLAIN, 32));
+		textFieldSSSub7.setColumns(10);
+		textFieldSSSub7.setBounds(1570, 775, 250, 60);
+		contentPane.add(textFieldSSSub7);
 	}
 }
