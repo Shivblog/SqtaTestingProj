@@ -291,6 +291,52 @@ public class SecondYear extends JFrame {
 		JButton btnCalculate = new JButton("Calculate");
 		btnCalculate.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				int[] arrs1 = {0};
+				int[] arrs2 = {0};
+				
+				try {
+					int FSSub1 = Integer.parseInt(textFieldFSSub1.getText());
+					int FSSub2 = Integer.parseInt(textFieldFSSub2.getText());
+					int FSSub3 = Integer.parseInt(textFieldFSSub3.getText());
+					int FSSub4 = Integer.parseInt(textFieldFSSub4.getText());
+					int FSSub5 = Integer.parseInt(textFieldFSSub5.getText());
+					int FSSub6 = Integer.parseInt(textFieldFSSub6.getText());
+					int FSSub7 = Integer.parseInt(textFieldFSSub7.getText());
+					int FSSub8 = Integer.parseInt(textFieldFSSub8.getText());
+					int FSSub9 = Integer.parseInt(textFieldFSSub9.getText());
+					
+					arrs1 = new int[]{FSSub1,FSSub2,FSSub3,FSSub4,FSSub5,FSSub6,FSSub7,FSSub8,FSSub9};
+				}catch(Exception e) {
+					arrs1 = new int[] {0};
+				}
+				
+				try {
+					int SSSub1 = Integer.parseInt(textFieldSSSub1.getText());
+					int SSSub2 = Integer.parseInt(textFieldSSSub2.getText());
+					int SSSub3 = Integer.parseInt(textFieldSSSub3.getText());
+					int SSSub4 = Integer.parseInt(textFieldSSSub4.getText());
+					int SSSub5 = Integer.parseInt(textFieldSSSub5.getText());
+					int SSSub6 = Integer.parseInt(textFieldSSSub6.getText());
+					int SSSub7 = Integer.parseInt(textFieldSSSub7.getText());
+					int SSSub8 = Integer.parseInt(textFieldSSSub8.getText());
+					
+					arrs2 = new int[]{SSSub1,SSSub2,SSSub3,SSSub4,SSSub5,SSSub6,SSSub7,SSSub8};
+				}catch(Exception e) {
+					arrs2 = new int[] {0};
+				}
+				
+				Calculate cal = new Calculate();
+				cal.calcCGPA(arrs1);
+				cal.calcCGPA(arrs2);
+				
+				if(arrs1.length==9 && arrs2.length==8) {
+					cal.SEcalcSGPA(arrs1,arrs2);
+				}
+				else {
+					arrs1 = new int[] {0};
+					arrs2 = new int[] {0};
+					cal.SEcalcSGPA(arrs1,arrs2);
+				}
 			}
 		});
 		btnCalculate.setHorizontalAlignment(SwingConstants.RIGHT);
